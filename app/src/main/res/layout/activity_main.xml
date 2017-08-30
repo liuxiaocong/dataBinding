@@ -34,6 +34,12 @@
                 android:layout_height="wrap_content"
                 android:text="@{user.age}"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:background="#ffff00"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
             <Button
                 android:text="Change"
                 android:id="@+id/change"

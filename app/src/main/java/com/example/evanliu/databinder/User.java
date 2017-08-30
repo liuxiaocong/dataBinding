@@ -10,6 +10,17 @@ import android.databinding.Bindable;
 public class User extends BaseObservable {
     private String name;
     private String age;
+    private String avatar;
+
+    @Bindable
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+        notifyPropertyChanged(BR.avatar);
+    }
 
     @Bindable
     public String getName() {

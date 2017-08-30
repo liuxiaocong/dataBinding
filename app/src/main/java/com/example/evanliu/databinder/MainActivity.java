@@ -5,7 +5,9 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.evanliu.databinder.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setUser(user);
         binding.setHandler(this);
+        ImageView imageView = (ImageView) findViewById(R.id.img);
+        Glide.with(this).load("https://cdn-images-1.medium.com/max/1200/1*SUZUVog_MUeoBOCpWmd15w.jpeg").into(imageView);
     }
 
     public void onClickChange(View view) {
